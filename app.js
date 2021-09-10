@@ -64,7 +64,6 @@ function checkPalindromeForAllDateFormats(date) {
   return flag;
 }
 
-// check for leap year
 function isLeapYear(year) {
   if (year % 400 === 0) {
     return true;
@@ -78,41 +77,32 @@ function isLeapYear(year) {
   return false;
 }
 
-// gets next date
 function getNextDate(date) {
-  let day = date.day + 1; // increment the day  => 32
+  let day = date.day + 1;
   let month = date.month;
   let year = date.year;
 
-  const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; // 0 - 11
+  const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  // check for february
   if (month === 2) {
-    // check for leap year
     if (isLeapYear(year)) {
-      // 2020 => true
       if (day > 29) {
-        // false
         day = 1;
-        month++; // increment the month
+        month++;
       }
     } else {
       if (day > 28) {
         day = 1;
-        month++; // increment the month
+        month++;
       }
     }
-  }
-  // check for other months
-  else {
-    //  check if the day exceeds the max days in month
+  } else {
     if (day > daysInMonth[month - 1]) {
       day = 1;
-      month++; // increment the month
+      month++;
     }
   }
 
-  // increment the year if month is greater than 12
   if (month > 12) {
     month = 1;
     year++;
@@ -125,7 +115,6 @@ function getNextDate(date) {
   };
 }
 
-// get next palindrome date
 function getNextPalindromeDate(date) {
   let ctrNextDate = 0;
   let nextDate = getNextDate(date);
