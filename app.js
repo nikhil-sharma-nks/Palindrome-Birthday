@@ -189,20 +189,20 @@ submitBtn.addEventListener("click", function submitBtnClick() {
       month: Number(listOfDate[1]),
       year: Number(listOfDate[0]),
     };
-    console.log(date);
+    // console.log(date);
 
     const isPalindrome = checkPalindromeForAllDateFormats(date);
-    console.log(isPalindrome);
+    // console.log(isPalindrome);
     if (isPalindrome) {
       resultMsg.style.display = "block";
       resultMsg.style.color = "green";
       resultMsg.innerText = `Yay!! Your Birthday ${date.day}-${date.month}-${date.year} is a Palindrome!`;
     } else {
       const [ctrNextDate, nextDate] = getNextPalindromeDate(date);
-      console.log(ctrNextDate, nextDate);
+      // console.log(ctrNextDate, nextDate);
 
       const [ctrPreviousDate, previousDate] = getPreviousPalindromeDate(date);
-      console.log(ctrPreviousDate, previousDate);
+      // console.log(ctrPreviousDate, previousDate);
 
       let stringResult = `Sorry Your Birthday Is Not A Palindrome\n`;
 

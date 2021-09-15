@@ -113,3 +113,68 @@ body {
   background-color: var(--primary-color);
   cursor: pointer;
 }
+
+@media (max-width: 540px) {
+  .container {
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  .container .page-heading {
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+
+  .container .description {
+    font-size: 1rem;
+    padding: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .input-container .input {
+    width: 80%;
+    font-size: 1.3rem;
+  }
+
+  .btn-submit {
+    margin: 10px auto 25px;
+    font-size: 1rem;
+  }
+
+  .result {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .main-footer {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    margin: 5rem auto 10px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .social .fab {
+    border-radius: 50%;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 0.3rem;
+  }
+}
